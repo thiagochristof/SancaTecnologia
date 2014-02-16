@@ -13,8 +13,8 @@ $uri = mysql_real_escape_string(parseInput($_POST['uri']));
 $description = mysql_real_escape_string(parseInput($_POST['description']));
 
 // validate fields
-if(empty($title) || empty($type) || empty($address) || empty($uri) || empty($description) || empty($owner_name) || empty($owner_email)) {
-  echo "All fields are required - please try again.";
+if(empty($title) || empty($type) || empty($address) || empty($description) || empty($owner_name) || empty($owner_email)) {
+  echo "Todos os campos são obrigatórios - por favor tente novamente.";
   exit;
   
 } else {

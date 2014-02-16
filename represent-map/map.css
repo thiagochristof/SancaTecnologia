@@ -56,20 +56,12 @@ html, body, #map_canvas
   left: 0;
   top: 0;
   z-index: 3;
-  background-color: #fff;
+  background-color: #111;
   width: 100%;
   height: 60px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #777;
   overflow: hidden;
-  min-width: 850px;
-  background: #fcfcfc; /* Old browsers */
-  background: -moz-linear-gradient(top,  #ffffff 0%, #dddddd 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #ffffff 0%,#dddddd 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+  min-width: 850px;  
 }
 .topbar .left
 {
@@ -176,7 +168,7 @@ html, body, #map_canvas
   top: 0;
   height: 100%;
   background-color: #fff;
-  width: 250px;
+  width: 330px;
 }
 .menu .blurb,
 .menu .attribution

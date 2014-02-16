@@ -16,6 +16,7 @@ include_once "header.php";
     https://github.com/abenzer/represent-map
     -->
     <title><?= $title_tag ?></title>
+    <meta name="description" content="Mapa tecnológico de São Carlos: empresas de tecnologia, startups, incubadoras, laboratórios e centros de pesquisa e entidades de tecnologia.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -141,7 +142,7 @@ include_once "header.php";
           zoomControl: zoomControl,
           styles: mapStyles,
           zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.SMALL,
+            style: google.maps.ZoomControlStyle.DEFAULT,
             position: google.maps.ControlPosition.LEFT_CENTER
           }
         };
@@ -167,13 +168,13 @@ include_once "header.php";
         markers = new Array();
         <?php
           $types = Array(
+              Array('company', 'Empresas tecnológicas'),
               Array('startup', 'Startups'),
-              Array('accelerator','Accelerators'),
-              Array('incubator', 'Incubators'),
+              Array('accelerator','Aceleradoras'),
+              Array('incubator', 'Incubadoras e Parques'),
               Array('coworking', 'Coworking'),
-              Array('investor', 'Investors'),
-              Array('service', 'Consulting'),
-              Array('hackerspace', 'Hackerspaces'),
+              Array('academic', 'Lab. e Pesq. Acadêmicas'),
+              Array('group', 'Grupos, Hackersp. e Clubes'),
               Array('event', 'Events'),
               );
           $marker_id = 0;
@@ -367,6 +368,18 @@ include_once "header.php";
     </script>
 
     <? echo $head_html; ?>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-48103277-1', 'capitaldatecnologia.com.br');
+      ga('send', 'pageview');
+
+    </script>
   </head>
   <body>
 
@@ -403,15 +416,15 @@ include_once "header.php";
             </a>
           </div>
           <div class="buttons">
-            <a href="#modal_info" class="btn btn-large btn-info" data-toggle="modal"><i class="icon-info-sign icon-white"></i>About this Map</a>
+            <a href="#modal_info" class="btn btn-large btn-info" data-toggle="modal"><i class="icon-info-sign icon-white"></i>Sobre</a>
             <?php if($sg_enabled) { ?>
-              <a href="#modal_add_choose" class="btn btn-large btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i>Add Something</a>
+              <a href="#modal_add_choose" class="btn btn-large btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i>Incluir no mapa</a>
             <? } else { ?>
-              <a href="#modal_add" class="btn btn-large btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i>Add Something</a>
+              <a href="#modal_add" class="btn btn-large btn-success" data-toggle="modal"><i class="icon-plus-sign icon-white"></i>Incluir no mapa</a>
             <? } ?>
           </div>
           <div class="search">
-            <input type="text" name="search" id="search" placeholder="Search for companies..." data-provide="typeahead" autocomplete="off" />
+            <input type="text" name="search" id="search" placeholder="Busca" data-provide="typeahead" autocomplete="off" />
           </div>
         </div>
       </div>
@@ -422,13 +435,13 @@ include_once "header.php";
       <ul class="list" id="list">
         <?php
           $types = Array(
+              Array('company', 'Empresas tecnológicas'),
               Array('startup', 'Startups'),
-              Array('accelerator','Accelerators'),
-              Array('incubator', 'Incubators'),
+              Array('accelerator','Aceleradoras'),
+              Array('incubator', 'Incubadoras e Parques'),
               Array('coworking', 'Coworking'),
-              Array('investor', 'Investors'),
-              Array('service', 'Consulting'),
-              Array('hackerspace', 'Hackerspaces')
+              Array('academic', 'Lab. e Pesq. Acadêmicas'),
+              Array('group', 'Grupos, Hackersp. e Clubes')
               );
           if($show_events == true) {
             $types[] = Array('event', 'Events');
@@ -475,49 +488,34 @@ include_once "header.php";
     <div class="modal hide" id="modal_info">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3>About this Map</h3>
+        <h3>Sobre</h3>
       </div>
       <div class="modal-body">
+        <h4>Capital da Tecnologia</h4>
         <p>
-          We built this map to connect and promote the tech startup community
-          in our beloved Los Angeles. We've seeded the map but we need
-          your help to keep it fresh. If you don't see your company, please
+          São Carlos recebeu em 2011 o <a href="http://pt.wikipedia.org/wiki/Denominações_de_São_Carlos_(São_Paulo)#Capital_Nacional_da_Tecnologia">título oficial de Capital Nacional da Tecnologia</a> devido ao vigor de seu ecossistema tecnológico composto por universidades, centros de pesquisa e seu crescente número de indústrias e empresas de tecnologia. A cidade também é reconhecida pela maior concentração per capita de profissionais com doutorado do país e pelo número anual de registros de patentes bastante acima da média nacional.
+        </p>
+        <p>
+          Outro destaque, mais recente, é o surgimento de um <a href="http://sancastartups.com.br">ecossistema de startups</a> de internet, aplicativos móveis e hardware que, somado ao ambiente de prosperidade tecnológica e custo de vida menor que o das capitais, fazem de São Carlos um dos candidatos mais promissores a se tornar um "Vale do Silício" brasileiro. 
+        </p>
+        <h4>Inclua no mapa</h4>
+        <p>
+          Este site é uma iniciativa para apresentar São Carlos no cenário tecnológico nacional e é referência para investidores, empresários, veículos de imprensa, potenciais clientes e parceiros de pesquisa e desenvolvimento.
+        </p>
+        <p>
+          Se você faz parte de uma empresa, startup, grupo ou entidade de base tecnológica, 
           <?php if($sg_enabled) { ?>
-            <a href="#modal_add_choose" data-toggle="modal" data-dismiss="modal">submit it here</a>.
+            <a href="#modal_add_choose" data-toggle="modal" data-dismiss="modal">inclua-o agora no mapa da tecnologia</a>.
           <?php } else { ?>
-            <a href="#modal_add" data-toggle="modal" data-dismiss="modal">submit it here</a>.
+            <a href="#modal_add" data-toggle="modal" data-dismiss="modal">inclua-o agora no mapa da tecnologia</a>.
           <?php } ?>
-          Let's put LA on the map together!
         </p>
         <p>
-        Questions? Feedback? Connect with us: <a href="http://www.twitter.com/<?= $twitter['username'] ?>" target="_blank">@<?= $twitter['username'] ?></a>
-        </p>
-        <p>
-          If you want to support the LA community by linking to this map from your website,
-          here are some badges you might like to use. You can also grab the <a href="./images/badges/LA-icon.ai">LA icon AI file</a>.
-        </p>
-        <ul class="badges">
-          <li>
-            <img src="./images/badges/badge1.png" alt="">
-          </li>
-          <li>
-            <img src="./images/badges/badge1_small.png" alt="">
-          </li>
-          <li>
-            <img src="./images/badges/badge2.png" alt="">
-          </li>
-          <li>
-            <img src="./images/badges/badge2_small.png" alt="">
-          </li>
-        </ul>
-        <p>
-          This map was built with <a href="https://github.com/abenzer/represent-map">RepresentMap</a> - an open source project we started
-          to help startup communities around the world create their own maps.
-          Check out some <a target="_blank" href="http://www.representmap.com">startup maps</a> built by other communities!
+        Obrigado por estar aqui.<br><a href="mailto:contato@capitaldatecnologia.com.br">contato@capitaldatecnologia.com.br</a>
         </p>
       </div>
       <div class="modal-footer">
-        <a href="#" class="btn" data-dismiss="modal" style="float: right;">Close</a>
+        <a href="#" class="btn" data-dismiss="modal" style="float: right;">Fechar</a>
       </div>
     </div>
 
@@ -527,76 +525,76 @@ include_once "header.php";
       <form action="add.php" id="modal_addform" class="form-horizontal">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
-          <h3>Add something!</h3>
+          <h3>Incluir no mapa</h3>
         </div>
         <div class="modal-body">
           <div id="result"></div>
           <fieldset>
             <div class="control-group">
-              <label class="control-label" for="add_owner_name">Your Name</label>
-              <div class="controls">
-                <input type="text" class="input-xlarge" name="owner_name" id="add_owner_name" maxlength="100">
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="add_owner_email">Your Email</label>
-              <div class="controls">
-                <input type="text" class="input-xlarge" name="owner_email" id="add_owner_email" maxlength="100">
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="add_title">Company Name</label>
+              <label class="control-label" for="add_title">Nome</label>
               <div class="controls">
                 <input type="text" class="input-xlarge" name="title" id="add_title" maxlength="100" autocomplete="off">
               </div>
             </div>
             <div class="control-group">
-              <label class="control-label" for="input01">Company Type</label>
+              <label class="control-label" for="input01">Tipo</label>
               <div class="controls">
                 <select name="type" id="add_type" class="input-xlarge">
+                  <option value="company">Empresa de tecnologia</option>
                   <option value="startup">Startup</option>
-                  <option value="accelerator">Accelerator</option>
-                  <option value="incubator">Incubator</option>
-                  <option value="coworking">Coworking</option>
-                  <option value="investor">VC/Angel</option>
-                  <option value="service">Consulting Firm</option>
-                  <option value="hackerspace">Hackerspace</option>
+                  <option value="accelerator">Aceleradora</option>
+                  <option value="incubator">Incubadora ou parque tecnológico</option>
+                  <option value="coworking">Espaço de Coworking</option>
+                  <option value="academic">Lab. ou Pesquisa Acadêmica (tecnologia)</option>
+                  <option value="group">Grupo, hackerspace ou clube</option>
                 </select>
               </div>
             </div>
             <div class="control-group">
-              <label class="control-label" for="add_address">Address</label>
+              <label class="control-label" for="add_address">Endereço</label>
               <div class="controls">
-                <input type="text" class="input-xlarge" name="address" id="add_address">
+                <input type="text" class="input-xlarge" name="address" id="add_address" placeholder="Ex: Rua Passeio dos Ipês, 350, São Carlos, SP">
                 <p class="help-block">
-                  Should be your <b>full street address (including city and zip)</b>.
-                  If it works on Google Maps, it will work here.
+                  Deve ser o <b>endereço completo, incluindo cidade e estado</b> para correto posicionamento no mapa.
+                  No caso de laboratórios ou deptos. universitários sem endereço, cole as coordenadas como aparecem na barra de endereço do Google Maps (será algo parecido com -22.0132923,-47.89085). Se precisar de ajuda: <a href="mailto:contato@capitaldatecnologia.com.br">contato@capitaldatecnologia.com.br</a>
                 </p>
               </div>
             </div>
             <div class="control-group">
-              <label class="control-label" for="add_uri">Website URL</label>
+              <label class="control-label" for="add_uri">Site (se houver)</label>
               <div class="controls">
-                <input type="text" class="input-xlarge" id="add_uri" name="uri" placeholder="http://">
-                <p class="help-block">
-                  Should be your full URL with no trailing slash, e.g. "http://www.yoursite.com"
-                </p>
+                <input type="text" class="input-xlarge" id="add_uri" name="uri" value="http://">
               </div>
             </div>
             <div class="control-group">
-              <label class="control-label" for="add_description">Description</label>
+              <label class="control-label" for="add_description">Descrição</label>
               <div class="controls">
                 <input type="text" class="input-xlarge" id="add_description" name="description" maxlength="150">
                 <p class="help-block">
-                  Brief, concise description. What's your product? What problem do you solve? Max 150 chars.
+                  Uma breve descrição. Qual seu produto? O que sua empresa ou grupo faz? Máximo 150 caracteres.
+                </p>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="add_owner_name">Seu nome</label>
+              <div class="controls">
+                <input type="text" class="input-xlarge" name="owner_name" id="add_owner_name" maxlength="100">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="add_owner_email">Seu email</label>
+              <div class="controls">
+                <input type="text" class="input-xlarge" name="owner_email" id="add_owner_email" maxlength="100">
+                <p class="help-block">
+                  Serão utilizados apenas para checar a inclusão.
                 </p>
               </div>
             </div>
           </fieldset>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Submit for Review</button>
-          <a href="#" class="btn" data-dismiss="modal" style="float: right;">Close</a>
+          <button type="submit" class="btn btn-primary">Submeter para revisão</button>
+          <a href="#" class="" data-dismiss="modal" style="">Fechar</a>
         </div>
       </form>
     </div>
@@ -622,7 +620,7 @@ include_once "header.php";
 
             // if submission was successful, show info alert
             if(data == "success") {
-              $("#modal_addform #result").html("We've received your submission and will review it shortly. Thanks!");
+              $("#modal_addform #result").html("Para garantir a qualidade deste site todas as submissões são revisadas, o que será feito em poucos dias. Obrigado por estar aqui, São Carlos é uma cidade mais tecnológica por isso. (E lembre-se de contar para seus contatos sobre este mapa!)");
               $("#modal_addform #result").addClass("alert alert-info");
               $("#modal_addform p").css("display", "none");
               $("#modal_addform fieldset").css("display", "none");
