@@ -537,7 +537,7 @@ include_once "header.php";
               </div>
             </div>
             <div class="control-group">
-              <label class="control-label" for="input01">Tipo</label>
+              <label class="control-label" for="add_type">Tipo</label>
               <div class="controls">
                 <select name="type" id="add_type" class="input-xlarge">
                   <option value="company">Empresa de tecnologia</option>
