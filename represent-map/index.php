@@ -17,6 +17,8 @@ include_once "header.php";
     -->
     <title><?= $title_tag ?></title>
     <meta name="description" content="Mapa tecnológico de São Carlos: empresas de tecnologia, startups, incubadoras, laboratórios e centros de pesquisa e entidades de tecnologia.">
+    <meta property="og:title" content="<?= $title_tag ?>" />
+    <meta property="og:description" content="Mapa tecnológico de São Carlos: empresas de tecnologia, startups, incubadoras, laboratórios e centros de pesquisa e entidades de tecnologia." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="_DtAAZU45r1AoUIkmnRz00y-DyPQFaqBiRct6p8SfNc" />
