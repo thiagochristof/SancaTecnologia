@@ -30,6 +30,7 @@ if($page != "login") {
 // connect to db
 mysql_connect($db_host, $db_user, $db_pass) or die(mysql_error());
 mysql_select_db($db_name) or die(mysql_error());
+mysql_set_charset('utf8');
 
 // get marker totals
 $total_approved = mysql_num_rows(mysql_query("SELECT id FROM places WHERE approved='1'"));
@@ -42,6 +43,7 @@ $admin_head = "
   <html>
   <head>
     <title>RepresentMap Admin</title>
+    <meta charset='UTF-8'>
     <link href='../bootstrap/css/bootstrap.css' rel='stylesheet' type='text/css' />
     <link href='../bootstrap/css/bootstrap-responsive.css' rel='stylesheet' type='text/css' />
     <link rel='stylesheet' href='admin.css' type='text/css' />
