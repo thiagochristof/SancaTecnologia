@@ -171,7 +171,7 @@ include_once "header.php";
         markers = new Array();
         <?php
           $types = Array(
-              Array('company', 'Empresas tecnológicas'),
+              Array('company', 'Empresas de tecnologia'),
               Array('startup', 'Startups'),
               Array('accelerator','Aceleradoras'),
               Array('incubator', 'Incubadoras e Parques'),
@@ -438,7 +438,7 @@ include_once "header.php";
       <ul class="list" id="list">
         <?php
           $types = Array(
-              Array('company', 'Empresas tecnológicas'),
+              Array('company', 'Empresas de tecnologia'),
               Array('startup', 'Startups'),
               Array('accelerator','Aceleradoras'),
               Array('incubator', 'Incubadoras e Parques'),
