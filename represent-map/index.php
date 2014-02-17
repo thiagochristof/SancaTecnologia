@@ -413,7 +413,7 @@ include_once "header.php";
         <div class="left">
           <div class="logo">
             <a href="./">
-              <img src="images/logo.png" alt="" />
+              <img src="images/logo.png" alt="São Carlos - Capital da Tecnologia" />
             </a>
           </div>
           <div class="buttons">
