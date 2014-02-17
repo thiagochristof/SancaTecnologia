@@ -19,6 +19,7 @@ include_once "header.php";
     <meta name="description" content="Mapa tecnológico de São Carlos: empresas de tecnologia, startups, incubadoras, laboratórios e centros de pesquisa e entidades de tecnologia.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="_DtAAZU45r1AoUIkmnRz00y-DyPQFaqBiRct6p8SfNc" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href="./bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
@@ -511,7 +512,7 @@ include_once "header.php";
           <?php } ?>
         </p>
         <p>
-        Obrigado por estar aqui.<br><a href="mailto:contato@capitaldatecnologia.com.br">contato@capitaldatecnologia.com.br</a>
+        Obrigado por estar aqui.<br><a href="mailto:mapa@capitaldatecnologia.com.br">mapa@capitaldatecnologia.com.br</a>
         </p>
       </div>
       <div class="modal-footer">
@@ -556,7 +557,7 @@ include_once "header.php";
                 <input type="text" class="input-xlarge" name="address" id="add_address" placeholder="Ex: Rua Passeio dos Ipês, 350, São Carlos, SP">
                 <p class="help-block">
                   Deve ser o <b>endereço completo, incluindo cidade e estado</b> para correto posicionamento no mapa.
-                  No caso de laboratórios ou deptos. universitários sem endereço, cole as coordenadas como aparecem na barra de endereço do Google Maps (será algo parecido com -22.0132923,-47.89085). Se precisar de ajuda: <a href="mailto:contato@capitaldatecnologia.com.br">contato@capitaldatecnologia.com.br</a>
+                  No caso de laboratórios ou deptos. universitários sem endereço, cole as coordenadas como aparecem na barra de endereço do Google Maps (será algo parecido com -22.0132923,-47.89085). Se precisar de ajuda: <a href="mailto:mapa@capitaldatecnologia.com.br">mapa@capitaldatecnologia.com.br</a>
                 </p>
               </div>
             </div>
