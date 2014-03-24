@@ -16,9 +16,9 @@ include_once "header.php";
     https://github.com/abenzer/represent-map
     -->
     <title><?= $title_tag ?></title>
-    <meta name="description" content="Mapa tecnológico de São Carlos: empresas de tecnologia, startups, incubadoras, laboratórios e centros de pesquisa e entidades de tecnologia.">
+    <meta name="description" content="Mapa tecnológico de São Carlos: empresas e indústrias de tecnologia, startups, incubadoras, laboratórios e centros de pesquisa e entidades de tecnologia.">
     <meta property="og:title" content="<?= $title_tag ?>" />
-    <meta property="og:description" content="Mapa tecnológico de São Carlos: empresas de tecnologia, startups, incubadoras, laboratórios e centros de pesquisa e entidades de tecnologia." />
+    <meta property="og:description" content="Mapa tecnológico de São Carlos: empresas e indústrias de tecnologia, startups, incubadoras, laboratórios e centros de pesquisa e entidades de tecnologia." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="_DtAAZU45r1AoUIkmnRz00y-DyPQFaqBiRct6p8SfNc" />
@@ -171,7 +171,7 @@ include_once "header.php";
         markers = new Array();
         <?php
           $types = Array(
-              Array('company', 'Empresas de tecnologia'),
+              Array('company', 'Empresas e Indústrias'),
               Array('startup', 'Startups'),
               Array('accelerator','Aceleradoras'),
               Array('incubator', 'Incubadoras e Parques'),
@@ -438,7 +438,7 @@ include_once "header.php";
       <ul class="list" id="list">
         <?php
           $types = Array(
-              Array('company', 'Empresas de tecnologia'),
+              Array('company', 'Empresas e Indústrias'),
               Array('startup', 'Startups'),
               Array('accelerator','Aceleradoras'),
               Array('incubator', 'Incubadoras e Parques'),
@@ -506,7 +506,7 @@ include_once "header.php";
           Este site é uma iniciativa para apresentar São Carlos no cenário tecnológico nacional e é referência para investidores, empresários, veículos de imprensa, potenciais clientes e parceiros de pesquisa e desenvolvimento.
         </p>
         <p>
-          Se você faz parte de uma empresa, startup, grupo ou entidade de base tecnológica, 
+          Se você faz parte de uma empresa, indústria, startup, grupo ou entidade de base tecnológica, 
           <?php if($sg_enabled) { ?>
             <a href="#modal_add_choose" data-toggle="modal" data-dismiss="modal">inclua-o agora no mapa da tecnologia</a>.
           <?php } else { ?>
@@ -543,7 +543,7 @@ include_once "header.php";
               <label class="control-label" for="add_type">Tipo</label>
               <div class="controls">
                 <select name="type" id="add_type" class="input-xlarge">
-                  <option value="company">Empresa de tecnologia</option>
+                  <option value="company">Empresa ou indústria</option>
                   <option value="startup">Startup</option>
                   <option value="accelerator">Aceleradora</option>
                   <option value="incubator">Incubadora ou parque tecnológico</option>
